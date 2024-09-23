@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Frotesk:wght@400;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+body{
+    background-color: #FFEBCD;
+}
+h1{
+    color:#1b3928;
+}
+h2{
+    color: #536b57;
+}
+h3{
+    color: #156132;
+
+}
+h4 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f0e68c;
+    padding: 10px;
+    margin-bottom: 15px
+}
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+ol {
+    margin-left: 40px;
+}
+
+li {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#tableH{
+    background-color: #a2a857;
+}
+
+h2 a {
+    color: #67430d;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    color: #b2f800;
+    text-decoration: underline;
+}
+
+h2 a:visited {
+    color: #e40a0a;
+}
+
+a {
+    color: #67430d;
+    text-decoration: none;
+}
+a:hover {
+    color: #b2f800;
+    text-decoration: underline;
+}
+a:visited {
+    color: #e40a0a;
+}
