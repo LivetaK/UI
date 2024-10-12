@@ -1,75 +1,397 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Frotesk:wght@400;700&display=swap");
-
 
 * {
+    font-size: 20px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Source Code Pro', monospace;
 }
 
-body{
-    background-color: #FFEBCD;
+header {
+    position:sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #6e8658;
+    z-index: 100;
+    padding: 10px 0;
 }
-h1{
-    color:#1b3928;
-}
-h2{
-    color: #536b57;
-}
-h3{
-    color: #156132;
-
-}
-h4 {
-    color: #000000;
-    font-size: 18px;
+.logo a {
+    font-size: 2rem;
     font-weight: bold;
-    background-color: #f0e68c;
-    padding: 10px;
-    margin-bottom: 15px
-}
-ul {
-    list-style-type: disc;
-    margin-left: 30px;
+    color: #D0D5CE;
 }
 
-ol {
+.flex{
+    display: flex;
+    align-items: center;
+}
+.navbar .container{
+    background-color: #6e8658;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+.nav-links{
+    font-size: 6rem;
+    gap: 20px;
+    list-style:none;
+}
+.navbar{
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.navbar a{
+    padding: 20px 0;
+    display: inline-block;
+    color:#D0D5CE;
+    text-decoration: none;
+
+}
+.navbar a:hover{
+    padding: 20px 0;
+    display: inline-block;
+    color:#EFE9E1;
+    text-decoration: none;
+}
+.homepage {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+}
+
+.homepage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("images/background.jpg") center/cover;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.homepage .content{
+    height: 85%;
+    flex-direction: column;
+    justify-content: center;
+}
+.homepage .text{
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 40px 0;
+    color: #D0D5CE;
+    text-align: center;
+    width: 100%
+}
+.homepage .text p{
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.homepage .text h1{
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+.homepage a{
+    color: #D0D5CE;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 10px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border:2px solid #000000;
+}
+.homepage a:hover{
+    color: #290907;
+    background-color: rgba(208, 213, 206, 0.6);
+}
+
+section{
+    padding-top: 40px;
+    color:#290907;
+}    
+section.patarimai{
+    background-color: #D0D5CE;
+    margin-bottom: 0px;
+}
+.section-title{
+    text-align: center;
+}
+section h2 {
+    font-size: 3rem;
+}
+
+section.patarimai ol {
+    list-style-type: decimal;
     margin-left: 40px;
+    padding-left: 20px;
 }
 
-li {
-    margin-top: 15px;
+section.patarimai ol li { /*viskas bendrai*/
+    margin-left: 20px;
+    font-size: 1.8rem;  
+    font-weight: normal;
+    padding-bottom: 40px;
+}
+
+section.patarimai ol li::marker { /*numeriai*/
+    list-style-type: decimal;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+section.patarimai ol li strong { /*pavadinimas*/
+    font-weight: bold;
+    font-size: inherit;
+}
+section.patarimai ol li p { 
+    margin-top: 20px;
+    font-size: 1.2rem;  
+}
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.receptas {
+    background-color: #D0D5CE;
+    padding: 20px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.image-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-title img {
+    max-width: 400px;
+    height: auto;
+}
+
+.image-title h4 {
+    font-size: 2rem;
+    margin: 0;
+    color: #290907;
+}
+
+.text-content {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.ingridientai-paruosimas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.ingridientai, .paruosimas {
+    flex: 1;
+}
+
+h5 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-#tableH{
-    background-color: #a2a857;
+ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
 }
 
-h2 a {
-    color: #67430d;
-    text-decoration: none;
+ul li, ol li {
+    margin-bottom: 10px;
 }
 
-h2 a:hover {
-    color: #b2f800;
-    text-decoration: underline;
+@media (max-width: 768px) {
+    .nav-links {
+        font-size: 1.2em;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+.nav-links a {
+        margin: 0;
+        padding: 5px 0;
+    }
+}
+    .homepage .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .homepage .text p {
+        font-size: 1rem;
+    }
+
+    .homepage a {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    .patarimai {
+        padding: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 0;
+        gap: 3px; 
+    }
+
+    .navbar a {
+        padding: 5px 0;
+        font-size: 1rem;
+    }
+
+    .homepage .text h1 {
+        font-size: 1.8rem;
+    }
+
+    .homepage .text p {
+        font-size: 0.9rem;
+    }
+
+    .homepage a {
+        font-size: 0.9rem;
+        padding: 6px 15px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .patarimai {
+        padding: 10px;
+    }
+
+    section.patarimai ol li {
+        font-size: 1.2rem;
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+
+    h5 {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+    }
+
+    .text-content {
+        padding: 10px 0;
+    }
+
+    .content-container {
+        gap: 10px;
+    }
+
+    .image-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-title img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image-title h4 {
+        font-size: 1.5rem;
+    }
+
+    .ingridientai-paruosimas {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ingridientai, .paruosimas {
+        width: 100%;
+    }
 }
 
-h2 a:visited {
-    color: #e40a0a;
+@media (max-width: 320px) {
+    .nav-links {
+        font-size: 0.9rem;
+        gap: 3px;
+    }
+
+    .navbar a {
+        padding: 8px 0;
+        font-size: 0.8rem;
+    }
+
+    .homepage .text h1 {
+        font-size: 1.5rem;
+    }
+
+    .homepage .text p {
+        font-size: 0.8rem;
+    }
+
+    .homepage a {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+
+    section {
+        padding: 8px;
+    }
+
+    section.patarimai ol li {
+        font-size: 1rem;
+        margin-left: 5px;
+        padding-bottom: 5px;
+    }
+
+    .image-title h4 {
+        font-size: 1.2rem;
+    }
+
+    .ingridientai-paruosimas {
+        gap: 5px;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
 }
 
-a {
-    color: #67430d;
-    text-decoration: none;
-}
-a:hover {
-    color: #b2f800;
-    text-decoration: underline;
-}
-a:visited {
-    color: #e40a0a;
+
+.navbar a.active {
+    color: #EFE9E1;
+    font-weight: bold;
+    border-bottom: 2px solid #EFE9E1;
 }
